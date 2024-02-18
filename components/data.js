@@ -11,23 +11,23 @@ import benefitOneImg from "../public/img/benefit-one.png";
 import benefitTwoImg from "../public/img/benefit-two.png";
 
 const benefitOne = {
-  title: "Highlight your benefits",
-  desc: "You can use this space to highlight your first benefit or a feature of your product. It can also contain an image or Illustration like in the example along with some bullet points.",
+  title: "Compétence, Expertise & Réseaux",
+  desc: "Nous sélectionnons rigoureusement les meilleurs formateurs, évalués et approuvés par des experts, pour garantir une éducation de qualité supérieure adaptée aux besoins spécifiques de votre école.",
   image: benefitOneImg,
   bullets: [
     {
-      title: "Understand your customers",
-      desc: "Then explain the first point breifly in one or two lines.",
+      title: "Satisfaction des apprenants",
+      desc: "Formulaire de satisfaction gratuit afin d'évaluer nos formateurs",
       icon: <FaceSmileIcon />,
     },
     {
-      title: "Improve acquisition",
-      desc: "Here you can add the next benefit point.",
+      title: "L'adaptation",
+      desc: "Formés en interne, nos formateurs maîtrisent la diversité, l'accessibilité, le milieu professionnel, la reconversion et l'enseignement aux étudiants.",
       icon: <ChartBarSquareIcon />,
     },
     {
-      title: "Drive customer retention",
-      desc: "This will be your last bullet point in this section.",
+      title: "Evaluation",
+      desc: "Tous les 6 mois, nos formateurs sont réévalués via une grille de 20 critères Qualiopi, assurant une amélioration continue de leur qualité.",
       icon: <CursorArrowRaysIcon />,
     },
   ],

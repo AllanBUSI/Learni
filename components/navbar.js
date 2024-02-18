@@ -1,5 +1,4 @@
 import Link from "next/link";
-import ThemeChanger from "./DarkSwitch";
 import Image from "next/image"
 import { Disclosure } from "@headlessui/react";
 
@@ -92,8 +91,6 @@ const Navbar = () => {
           <Link href="/" className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5">
               Get Started
           </Link>
-
-          <ThemeChanger />
         </div>
       </nav>
     </div>

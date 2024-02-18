@@ -16,10 +16,10 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>Nextly - Free Nextjs & TailwindCSS Landing Page Template</title>
+        <title>Learni - On propulse votre école vers l'excellence avec des formateurs d'élite</title>
         <meta
           name="description"
-          content="Nextly is a free landing page template built with next.js & Tailwind CSS"
+          content="Learni - On propulse votre école vers l'excellence avec des formateurs d'élite"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -27,11 +27,9 @@ const Home = () => {
       <Navbar />
       <Hero />
       <SectionTitle
-        pretitle="Nextly Benefits"
-        title=" Why should you use this landing page">
-        Nextly is a free landing page & marketing website template for startups
-        and indie projects. Its built with Next.js & TailwindCSS. And its
-        completely open-source.
+        pretitle="Pourquoi nous choisir ?"
+        title="Expertise, Innovation, Soutien, Excellence, Pédagogie">
+        Notre engagement : offrir une expertise d'élite, un soutien sur mesure, et une innovation continue pour propulser votre établissement vers l'excellence éducative avec une synergie inégalée.
       </SectionTitle>
       <Benefits data={benefitOne} />
       <Benefits imgPos="right" data={benefitTwo} />
