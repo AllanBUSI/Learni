@@ -34,23 +34,23 @@ const benefitOne = {
 };
 
 const benefitTwo = {
-  title: "Offer more benefits here",
-  desc: "You can use this same layout with a flip image to highlight your rest of the benefits of your product. It can also contain an image or Illustration as above section along with some bullet points.",
+  title: "Nos domaines d'intervention",
+  desc: "",
   image: benefitTwoImg,
   bullets: [
     {
-      title: "Mobile Responsive Template",
-      desc: "Nextly is designed as a mobile first responsive template.",
+      title: "Technologies web",
+      desc: "Nos formateurs, experts en technologies actuelles, enseignent la création de sites web, applications mobiles, jeux vidéo et logiciels desktop.",
       icon: <DevicePhoneMobileIcon />,
     },
     {
-      title: "Powered by Next.js & TailwindCSS",
-      desc: "This template is powered by latest technologies and tools.",
+      title: "Technologies data",
+      desc: "Nos formateurs spécialisés enseignent le Big Data, Blockchain, l'intelligence artificielle, le Cloud Computing et l'utilisation de ChatGPT, alignés sur les dernières avancées technologiques.",
       icon: <AdjustmentsHorizontalIcon />,
     },
     {
-      title: "Dark & Light Mode",
-      desc: "Nextly comes with a zero-config light & dark mode. ",
+      title: "Marketing et commerce",
+      desc: "Nos formateurs qualifiés transmettent des compétences avancées en commerce, couvrant le marketing, la vente, la gestion client et les stratégies commerciales modernes.",
       icon: <SunIcon />,
     },
   ],

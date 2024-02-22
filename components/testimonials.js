@@ -2,9 +2,9 @@ import Image from "next/image";
 import React from "react";
 import Container from "./container";
 
-import userOneImg from "../public/img/user1.jpg";
-import userTwoImg from "../public/img/user2.jpg";
-import userThreeImg from "../public/img/user3.jpg";
+import userOneImg from "../public/img/celian.jpeg";
+import userTwoImg from "../public/img/rufus.jpg";
+import userThreeImg from "../public/img/nicolas.jpg";
 
 const Testimonials  = () => {
   return (
@@ -13,42 +13,40 @@ const Testimonials  = () => {
         <div className="lg:col-span-2 xl:col-auto">
           <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
             <p className="text-2xl leading-normal ">
-              Share a real <Mark>testimonial</Mark>
-              that hits some of your benefits from one of your popular customer.
+              Allan nous à permis de monter en compétences sur <Mark> la cybersécurité </Mark>,
+              nous avons appris a faire des injections SQL avec SQLMap.
             </p>
 
             <Avatar
               image={userOneImg}
-              name="Sarah Steiner"
-              title="VP Sales at Google"
+              name="Célian Lebacle"
+              title="Développeur freelance"
             />
           </div>
         </div>
         <div className="">
           <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
             <p className="text-2xl leading-normal ">
-              Make sure you only pick the <Mark>right sentence</Mark>
-              to keep it short and simple.
+              Grâce à Allan, j'ai eu mon <Mark>BTS SIO</Mark> , <Mark>un stage </Mark> qui m'a permis de décrocher <Mark>une alternance </Mark>.
             </p>
 
             <Avatar
               image={userTwoImg}
-              name="Dylan Ambrose"
-              title="Lead marketer at Netflix"
+              name="Rufus Hilaire Mouakassa"
+              title="Développeur informatique"
             />
           </div>
         </div>
         <div className="">
           <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
             <p className="text-2xl leading-normal ">
-              This is an <Mark>awesome</Mark> landing page template I&apos;ve seen. I
-              would use this for anything.
+              Allan m'a permis d'avoir <Mark>mon dîplome TSSR</Mark> et j'ai trouvé un travail grâce à mes connaissances.
             </p>
 
             <Avatar
               image={userThreeImg}
-              name="Gabrielle Winn"
-              title="Co-founder of Acme Inc"
+              name="Nicolas Thiebault"
+              title="Administrateur Système et Réseaux"
             />
           </div>
         </div>

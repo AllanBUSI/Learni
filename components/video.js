@@ -1,42 +1,21 @@
-import { useState } from "react";
 import Container from "./container";
+import Image from "next/image"
 
-const Video = () => {
-  const [playVideo, setPlayVideo] = useState(false);
+const SFC = () => {
   return (
     <Container>
-      <div className="w-full max-w-4xl mx-auto overflow-hidden lg:mb-20 rounded-2xl ">
-        <div
-          onClick={() => setPlayVideo(!playVideo)}
-          className="relative bg-indigo-300 cursor-pointer aspect-w-16 aspect-h-9 bg-gradient-to-tr from-purple-400 to-indigo-700">
-          {!playVideo && (
-            <button className="absolute inset-auto w-16 h-16 text-white transform -translate-x-1/2 -translate-y-1/2 lg:w-28 lg:h-28 top-1/2 left-1/2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-16 h-16  lg:w-28 lg:h-28"
-                viewBox="0 0 20 20"
-                fill="currentColor">
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
-                  clipRule="evenodd"
-                />
-              </svg>
-              <span className="sr-only">Play Video</span>
-            </button>
-          )}
-          {playVideo && (
-            <iframe
-              src="https://www.youtube-nocookie.com/embed/aOq49euWnIo?controls=0&autoplay=1"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-          )}
-        </div>
+      <script src="../node_modules/flowbite/dist/flowbite.js"></script>
+      <div class="flex justify-center items-center">
+          <Image src={"/img/brands/logo.webp"} alt="Station F logo" width={800} height={300}/>
       </div>
+      <Container
+      className={`flex w-full flex-col mt-4`}>
+        <h2 className="max-w-8xl m-20 text-center text-3xl font-bold leading-snug tracking-tight text-gray-400 lg:leading-tight lg:text-2xl dark:text-black-400">
+        Nous recrutons directement depuis Station F, l'Escalator, et les universités de premier plan, des creusets d'innovation. Cela nous positionne idéalement pour attirer des talents exceptionnels, déterminés à redéfinir le futur. Rejoignez-nous et soyez au cœur d'une révolution, entouré des esprits les plus lumineux et avant-gardistes.
+        </h2>
+      </Container>
     </Container>
   );
 }
 
-export default Video;
+export default SFC;

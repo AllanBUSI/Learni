@@ -30,7 +30,7 @@ const Benefits = (props) => {
           }`}>
           <div>
             <div className="flex flex-col w-full mt-4">
-              <h3 className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-gray-400 lg:leading-tight lg:text-4xl dark:text-black">
+              <h3 className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-gray-500 lg:leading-tight lg:text-4xl dark:text-black">
                 {data.title}
               </h3>
 
@@ -66,7 +66,7 @@ function Benefit(props) {
           <h4 className="text-xl font-medium text-gray-800 dark:text-gray-700">
             {props.title}
           </h4>
-          <p className="mt-1 text-gray-500 dark:text-gray-400">
+          <p className="mt-1 text-gray-500 dark:text-gray-500">
             {props.children}
           </p>
         </div>

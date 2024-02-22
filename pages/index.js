@@ -4,22 +4,24 @@ import Navbar from "../components/navbar";
 import SectionTitle from "../components/sectionTitle";
 
 import { benefitOne, benefitTwo } from "../components/data";
-import Video from "../components/video";
+import SFC from "../components/video";
 import Benefits from "../components/benefits";
 import Footer from "../components/footer";
 import Testimonials from "../components/testimonials";
 import Cta from "../components/cta";
 import Faq from "../components/faq";
 import PopupWidget from "../components/popupWidget";
+import Container from "../components/container";
+
 
 const Home = () => {
   return (
     <>
       <Head>
-        <title>Learni - On propulse votre école vers l'excellence avec des formateurs d'élite</title>
+        <title>Learni - Votre école mérite des professionnels et des formateurs adaptés au marché du travail.</title>
         <meta
           name="description"
-          content="Learni - On propulse votre école vers l'excellence avec des formateurs d'élite"
+          content="Learni - Votre école mérite des professionnels et des formateurs adaptés au marché du travail."
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -33,24 +35,22 @@ const Home = () => {
       </SectionTitle>
       <Benefits data={benefitOne} />
       <Benefits imgPos="right" data={benefitTwo} />
-      <SectionTitle
-        pretitle="Watch a video"
-        title="Learn how to fullfil your needs">
-        This section is to highlight a promo or demo video of your product.
-        Analysts says a landing page with video has 3% more conversion rate. So,
-        don&apos;t forget to add one. Just like this.
-      </SectionTitle>
-      <Video />
+
+      <Container
+      className={`flex w-full flex-col mt-4`}>
+        <h2 className="max-w-8xl m-20 text-center text-3xl font-bold leading-snug tracking-tight text-gray-600 lg:leading-tight lg:text-5xl dark:text-black">
+        Explorez l'infini du savoir avec nos 1000 experts, prêts à dévoiler leurs connaissances dans un éventail impressionnant de spécialités. Votre curiosité n'a plus de limites !
+        </h2>
+      </Container>
+      <SFC />
       <SectionTitle
         pretitle="Testimonials"
-        title="Here's what our customers said">
-        Testimonails is a great way to increase the brand trust and awareness.
-        Use this section to highlight your popular customers.
+        title="Témoignages d'étudiants">
+        Avec 3000 élèves accompagnez en 2 ans et demi, nous avons créer notre méthodes pédagogiques
       </SectionTitle>
       <Testimonials />
       <SectionTitle pretitle="FAQ" title="Frequently Asked Questions">
-        Answer your customers possible questions here, it will increase the
-        conversion rate as well as support or chat requests.
+        Vos questions mérites des réponses
       </SectionTitle>
       <Faq />
       <Cta />

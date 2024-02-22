@@ -6,7 +6,7 @@ import { ChevronUpIcon } from "@heroicons/react/24/solid";
 const Faq = () => {
   return (
     <Container className="!p-0">
-      <div className="w-full max-w-2xl p-2 mx-auto rounded-2xl">
+      <div className="w-full max-w-4xl p-2 mx-auto rounded-2xl">
         {faqdata.map((item, index) => (
           <div key={item.question} className="mb-5">
             <Disclosure>
@@ -20,7 +20,7 @@ const Faq = () => {
                       } w-5 h-5 text-indigo-500`}
                     />
                   </Disclosure.Button>
-                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-gray-500 dark:text-gray-300">
+                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-gray-500 dark:text-gray-600">
                     {item.answer}
                   </Disclosure.Panel>
                 </>
@@ -35,22 +35,27 @@ const Faq = () => {
 
 const faqdata = [
   {
-    question: "Is this template completely free to use?",
-    answer: "Yes, this template is completely free to use.",
+    question: "Quels types de formations Learni propose-t-elle aux centres de formation ?",
+    answer: "Learni propose une gamme étendue de formations adaptées à divers secteurs, y compris mais sans s'y limiter, aux compétences numériques, à la gestion d'entreprise, au développement personnel, et aux compétences spécifiques à certaines professions. Nos formateurs spécialisés conçoivent des programmes sur mesure pour répondre aux besoins spécifiques de chaque centre de formation.",
   },
   {
-    question: "Can I use it in a commercial project?",
-    answer: "Yes, this you can.",
+    question: "Comment Learni assure-t-elle la qualité de ses formateurs ?",
+    answer: "Tous nos formateurs sont rigoureusement sélectionnés pour leur expertise dans leur domaine, leur expérience pédagogique et leur capacité à engager les apprenants. Nous assurons une formation continue à nos formateurs pour qu'ils restent à la pointe des méthodologies d'enseignement et des technologies éducatives.",
   },
   {
-    question: "What is your refund policy? ",
+    question: "Learni peut-elle aider à personnaliser les programmes de formation pour des besoins spécifiques ?",
     answer:
-      "If you're unhappy with your purchase for any reason, email us within 90 days and we'll refund you in full, no questions asked.",
+      "Absolument. Learni travaille en étroite collaboration avec les responsables pédagogiques pour développer des programmes de formation personnalisés qui répondent précisément aux objectifs d'apprentissage et aux exigences spécifiques de chaque centre. Notre processus comprend l'analyse des besoins, la conception de programme, l'implémentation, et l'évaluation pour assurer l'efficacité de la formation.",
   },
   {
-    question: "Do you offer technical support? ",
+    question: "Quelles sont les modalités de formation proposées par Learni ?",
     answer:
-      "No, we don't offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
+      "Nous proposons diverses modalités pour s'adapter à vos besoins, incluant des formations en présentiel, à distance (e-learning), et en mode hybride. Nous utilisons des plateformes d'apprentissage en ligne de pointe pour faciliter l'accès aux ressources pédagogiques et encourager l'interaction entre les apprenants et les formateurs.",
+  },
+  {
+    question: "Comment évaluez-vous l'impact des formations sur les apprenants ?",
+    answer:
+      "Learni adopte une approche multicritère pour l'évaluation de l'impact de la formation, incluant des évaluations avant et après la formation, des feedbacks réguliers des apprenants, des études de cas, et des analyses de performance. Nous fournissons également des rapports détaillés aux responsables pédagogiques pour leur permettre de mesurer l'efficacité de la formation et d'identifier les domaines d'amélioration.",
   },
 ];
 
