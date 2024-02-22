@@ -52,7 +52,7 @@ const PopupWidget = () => {
         {({ open }) => (
           <>
             <Disclosure.Button className="fixed z-40 flex items-center justify-center transition duration-300 bg-blue-900 rounded-full shadow-lg right-5 bottom-5 w-14 h-14 focus:outline-none hover:bg-blue600 focus:bg-blue600 ease">
-              <span className="sr-only">Open Contact form Widget</span>
+              <span className="sr-only">Besoin d'aide ?</span>
               <Transition
                 show={!open}
                 enter="transition duration-200 transform ease"
@@ -106,40 +106,19 @@ const PopupWidget = () => {
               leaveTo="opacity-0 translate-y-5">
               <Disclosure.Panel className=" flex flex-col  overflow-hidden left-0 h-full w-full sm:w-[350px] min-h-[250px] sm:h-[600px] border border-gray-300 bg-white shadow-2xl rounded-md sm:max-h-[calc(100vh-120px)]">
                 <div className="flex flex-col items-center justify-center h-32 p-5 bg-blue600">
-                  <h3 className="text-lg text-white">How can we help?</h3>
-                  <p className="text-white opacity-50">
-                    We usually respond in a few hours
+                  <h3 className="text-lg text-black">Besoin d'aide ?</h3>
+                  <p className="text-black opacity-50">
+                    Un ingénieur va se rendre disponible
                   </p>
                 </div>
                 <div className="flex-grow h-full p-6 overflow-auto bg-gray-50 ">
                   {!isSubmitSuccessful && (
-                    <form onSubmit={handleSubmit(onSubmit)} noValidate>
-                      <input
-                        type="hidden"
-                        value="YOUR_ACCESS_KEY_HERE"
-                        {...register("apikey")}
-                      />
-                      <input
-                        type="hidden"
-                        value={`${userName} sent a message from Nextly`}
-                        {...register("subject")}
-                      />
-                      <input
-                        type="hidden"
-                        value="Nextly Template"
-                        {...register("from_name")}
-                      />
-                      <input
-                        type="checkbox"
-                        className="hidden"
-                        style={{ display: "none" }}
-                        {...register("botcheck")}></input>
-
+                    <form>
                       <div className="mb-4">
                         <label
                           htmlFor="full_name"
                           className="block mb-2 text-sm text-gray-600 ">
-                          Full Name
+                          Nom complet
                         </label>
                         <input
                           type="text"
@@ -155,29 +134,16 @@ const PopupWidget = () => {
                               : "border-gray-300 focus:border-blue600 ring-blue100"
                           }`}
                         />
-                        {errors.name && (
-                          <div className="mt-1 text-sm text-red-400 invalid-feedback">
-                            {errors.name.message}
-                          </div>
-                        )}
                       </div>
 
                       <div className="mb-4">
                         <label
                           htmlFor="email"
                           className="block mb-2 text-sm text-gray-600 ">
-                          Email Address
+                          Email
                         </label>
                         <input
                           type="email"
-                          id="email"
-                          {...register("email", {
-                            required: "Enter your email",
-                            pattern: {
-                              value: /^\S+@\S+$/i,
-                              message: "Please enter a valid email",
-                            },
-                          })}
                           placeholder="you@company.com"
                           className={`w-full px-3 py-2 text-gray-600 placeholder-gray-300 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring   ${
                             errors.email
@@ -185,27 +151,18 @@ const PopupWidget = () => {
                               : "border-gray-300 focus:border-blue600 ring-blue100"
                           }`}
                         />
-
-                        {errors.email && (
-                          <div className="mt-1 text-sm text-red-400 invalid-feedback">
-                            {errors.email.message}
-                          </div>
-                        )}
                       </div>
 
                       <div className="mb-4">
                         <label
                           htmlFor="message"
                           className="block mb-2 text-sm text-gray-600 ">
-                          Your Message
+                          Votre message
                         </label>
 
                         <textarea
                           rows="4"
                           id="message"
-                          {...register("message", {
-                            required: "Enter your Message",
-                          })}
                           placeholder="Your Message"
                           className={`w-full px-3 py-2 text-gray-600 placeholder-gray-300 bg-white border border-gray-300 rounded-md h-28 focus:outline-none focus:ring   ${
                             errors.message
