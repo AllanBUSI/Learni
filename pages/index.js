@@ -2,7 +2,6 @@ import Head from "next/head";
 import Hero from "../components/hero";
 import Navbar from "../components/navbar";
 import SectionTitle from "../components/sectionTitle";
-
 import { benefitOne, benefitTwo } from "../components/data";
 import SFC from "../components/video";
 import Benefits from "../components/benefits";
@@ -25,7 +24,6 @@ const Home = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <Navbar />
       <Hero />
       <SectionTitle
@@ -38,7 +36,7 @@ const Home = () => {
 
       <Container
       className={`flex w-full flex-col mt-4`}>
-        <h2 className="max-w-8xl m-20 text-center text-3xl font-bold leading-snug tracking-tight text-gray-600 lg:leading-tight lg:text-5xl dark:text-black">
+        <h2 className="max-w-8xl m-20 text-center text-3xl font-bold leading-snug tracking-tight text-gray-600 lg:leading-tight lg:text-5xl">
         Explorez l'infini du savoir avec nos 1000 experts, prêts à dévoiler leurs connaissances dans un éventail impressionnant de spécialités. Votre curiosité n'a plus de limites !
         </h2>
       </Container>

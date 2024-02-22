@@ -11,8 +11,8 @@ const Testimonials  = () => {
     <Container>
       <div className="grid gap-10 lg:grid-cols-2 xl:grid-cols-3">
         <div className="lg:col-span-2 xl:col-auto">
-          <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
-            <p className="text-2xl leading-normal ">
+          <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 ">
+            <p className="text-2xl text-gray-900 leading-normal ">
               Allan nous à permis de monter en compétences sur <Mark> la cybersécurité </Mark>,
               nous avons appris a faire des injections SQL avec SQLMap.
             </p>
@@ -25,9 +25,9 @@ const Testimonials  = () => {
           </div>
         </div>
         <div className="">
-          <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
-            <p className="text-2xl leading-normal ">
-              Grâce à Allan, j'ai eu mon <Mark>BTS SIO</Mark> , <Mark>un stage </Mark> qui m'a permis de décrocher <Mark>une alternance </Mark>.
+          <div className=" flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 ">
+            <p className="text-2xl text-gray-900 leading-normal ">
+              Grâce à Allan, j'ai obtenu <Mark>un stage </Mark> qui m'a permis de décrocher <Mark>une alternance </Mark>.
             </p>
 
             <Avatar
@@ -38,8 +38,8 @@ const Testimonials  = () => {
           </div>
         </div>
         <div className="">
-          <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
-            <p className="text-2xl leading-normal ">
+          <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 ">
+            <p className="text-2xl text-gray-900 leading-normal ">
               Allan m'a permis d'avoir <Mark>mon dîplome TSSR</Mark> et j'ai trouvé un travail grâce à mes connaissances.
             </p>
 
@@ -61,15 +61,15 @@ function Avatar(props) {
       <div className="flex-shrink-0 overflow-hidden rounded-full w-14 h-14">
         <Image
           src={props.image}
-          width="40"
-          height="40"
+          width="75"
+          height="75"
           alt="Avatar"
           placeholder="blur"
         />
       </div>
       <div>
-        <div className="text-lg font-medium">{props.name}</div>
-        <div className="text-gray-600 dark:text-gray-400">{props.title}</div>
+        <div className="text-lg font-medium text-gray-600">{props.name}</div>
+        <div className="text-gray-800 ">{props.title}</div>
       </div>
     </div>
   );
@@ -79,7 +79,7 @@ function Mark(props) {
   return (
     <>
       {" "}
-      <mark className="text-indigo-800 bg-indigo-100 rounded-md ring-indigo-100 ring-4 dark:ring-indigo-900 dark:bg-indigo-900 dark:text-indigo-200">
+      <mark className="text-blue-800 bg-blue-100 rounded-md ring-blue-100 ring-4 ">
         {props.children}
       </mark>{" "}
     </>
