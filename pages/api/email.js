@@ -1,13 +1,15 @@
 import { sendEmail } from "../../function"
 
-export const Contact = async(req, res) => {
+const Contact = async(req, res) => {
   const user = req.body
 
+  console.log(user)
+
   await sendEmail({
-      to: 'busi.travail@gmail.com',
+      to: 'learni-formation@outlook.com',
       subject: 'Une demande de contact web',
       text: 'Une demande de contact web',
-      html: Template('une demande de contact', "Voici les informations : "+user.email+" <br/>"+user.name+" <br/>"+user.message)
+      html: user?.email+" <br/>"+user?.name+" <br/>"+user?.message
   })
 
   return res.status(200).json({
@@ -16,3 +18,5 @@ export const Contact = async(req, res) => {
   })
 
 }
+
+export default Contact;

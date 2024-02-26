@@ -12,42 +12,40 @@ const PopupWidget = () => {
     message: ''
   })
 
-  const SendContact = async() => {
+  const SendContact = async () => {
+    console.log(user);
+    setSend(true);
+    
+    if (user.name === '' || user.email === '' || user.message === '') {
+      console.log('aaa');
+      setError(true);
+      return;
+    }
+    
     try {
-      setSend(true)
-
-      if (user.name === '' || user.email === '' || user.message === '') {
-        return setError(true)
-      }
-
-      var options = {
-        'method': 'POST',
-        'url': process.env.HTTP_HOST+'/api/contact',
-        'headers': {
-          'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36',
-          'Content-Type': 'application/x-www-form-urlencoded'
+      const response = await fetch(`/api/email`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
         },
-        form: {
-          'name': user.name,
-          'email': user.email,
-          'message': user.message,
-        }
-      };
-
-      let response = await fetch(options);
-
-      console.log('ooo')
-
+        body: JSON.stringify({
+          name: user.name,
+          email: user.email,
+          message: user.message,
+        })
+      });
+    
+      console.log('ooo');
+    
       if (response.ok) {
         let json = await response.json();
       } else {
-        return setError(true)
+        throw new Error('Network response was not ok.');
       }
-
-    } catch (e) {
-      setError(true)
-      return
-    }
+    } catch (error) {
+      console.error('There has been a problem with your fetch operation:', error);
+      setError(true);
+    }    
   }
 
   return (
@@ -117,13 +115,17 @@ const PopupWidget = () => {
                   </p>
                 </div>
                 <div className="flex-grow h-full p-6 overflow-auto bg-gray-50 ">
-                  {!send  ? <><div className="mb-4">
+                  {!send ? <><div className="mb-4">
                     <label
                       htmlFor="full_name"
                       className="block mb-2 text-sm text-gray-600 ">
                       Nom complet
                     </label>
                     <input
+                      onChange={(e) => {
+                        setUser((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+                      }}
+                      name="name"
                       type="text"
                       id="full_name"
                       placeholder="John Doe"
@@ -138,6 +140,10 @@ const PopupWidget = () => {
                         Email
                       </label>
                       <input
+                        onChange={(e) => {
+                          setUser((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+                        }}
+                        name="email"
                         type="email"
                         placeholder="you@company.com"
                         className={`w-full px-3 py-2 text-gray-600 placeholder-gray-300 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring  `}
@@ -153,6 +159,10 @@ const PopupWidget = () => {
 
                       <textarea
                         rows="4"
+                        onChange={(e) => {
+                          setUser((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+                        }}
+                        name="message"
                         id="message"
                         placeholder="Your Message"
                         className={`w-full px-3 py-2 text-gray-600 placeholder-gray-300 bg-white border border-gray-300 rounded-md h-28 focus:outline-none focus:ring `}
@@ -208,13 +218,13 @@ const PopupWidget = () => {
                       />
                     </svg>
                     <h3 className="py-5 text-xl text-green-500">
-                      Message sent successfully
+                      Message envoyé !
                     </h3>
                     <button
                       className="mt-6 text-blue-900 focus:outline-none"
                       onClick={() => setSend(false)}
                     >
-                      Go back
+                      Retour
                     </button>
                   </div> : null}
 
@@ -234,13 +244,13 @@ const PopupWidget = () => {
                     </svg>
 
                     <h3 className="text-xl text-red-400 py-7">
-                      Oops, Something went wrong!
+                      Oops, un problème technique!
                     </h3>
                     <button
                       className="mt-6 text-blue-900 focus:outline-none"
                       onClick={() => setSend(false)}
                     >
-                      Go back
+                      Retour
                     </button>
                   </div> : null}
                 </div>
