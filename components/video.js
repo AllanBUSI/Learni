@@ -5,7 +5,7 @@ const SFC = () => {
   return (
     <Container>
       <script src="../node_modules/flowbite/dist/flowbite.js"></script>
-      <div class="flex justify-center items-center">
+      <div className="flex justify-center items-center">
           <Image src={"/img/brands/logo.webp"} alt="Station F logo" width={800} height={300}/>
       </div>
       <Container

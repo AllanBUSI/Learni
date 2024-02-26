@@ -18,17 +18,17 @@ const benefitOne = {
     {
       title: "Satisfaction des apprenants",
       desc: "Formulaire de satisfaction gratuit afin d'évaluer nos formateurs",
-      icon: <FaceSmileIcon />,
+      icon: <FaceSmileIcon className="text-gray-500" />,
     },
     {
       title: "L'adaptation",
       desc: "Formés en interne, nos formateurs maîtrisent la diversité, l'accessibilité, le milieu professionnel, la reconversion et l'enseignement aux étudiants.",
-      icon: <ChartBarSquareIcon />,
+      icon: <ChartBarSquareIcon className="text-gray-500" />,
     },
     {
       title: "Evaluation",
       desc: "Tous les 6 mois, nos formateurs sont réévalués via une grille de 20 critères Qualiopi, assurant une amélioration continue de leur qualité.",
-      icon: <CursorArrowRaysIcon />,
+      icon: <CursorArrowRaysIcon className="text-gray-500" />,
     },
   ],
 };
@@ -41,17 +41,17 @@ const benefitTwo = {
     {
       title: "Technologies web",
       desc: "Nos formateurs, experts en technologies actuelles, enseignent la création de sites web, applications mobiles, jeux vidéo et logiciels desktop.",
-      icon: <DevicePhoneMobileIcon />,
+      icon: <DevicePhoneMobileIcon className="text-gray-500" />,
     },
     {
       title: "Technologies data",
       desc: "Nos formateurs spécialisés enseignent le Big Data, Blockchain, l'intelligence artificielle, le Cloud Computing et l'utilisation de ChatGPT, alignés sur les dernières avancées technologiques.",
-      icon: <AdjustmentsHorizontalIcon />,
+      icon: <AdjustmentsHorizontalIcon className="text-gray-500" />,
     },
     {
       title: "Marketing et commerce",
       desc: "Nos formateurs qualifiés transmettent des compétences avancées en commerce, couvrant le marketing, la vente, la gestion client et les stratégies commerciales modernes.",
-      icon: <SunIcon />,
+      icon: <SunIcon className="text-gray-500" />,
     },
   ],
 };
