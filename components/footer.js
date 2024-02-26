@@ -28,58 +28,7 @@ export default function Footer() {
               Nous serons à la hauteur de l'ambition de votre école et nous le resterons
             </div>
           </div>
-
-          <div>
-            <div className="flex flex-wrap w-full -mt-2 -ml-3 lg:ml-0">
-              {navigation.map((item, index) => (
-                <Link key={index} href="/" className="w-full px-4 py-2 text-gray-500 rounded-md hover:text-blue-900 focus:text-blue-900 focus:bg-blue-100 focus:outline-none ">                 
-                    {item}
-                </Link>
-              ))}
-            </div>
-          </div>
-          <div>
-            <div className="flex flex-wrap w-full -mt-2 -ml-3 lg:ml-0">
-              {legal.map((item, index) => (
-                <Link key={index} href="/" className="w-full px-4 py-2 text-gray-500 rounded-md hover:text-blue-900 focus:text-blue-900 focus:bg-blue-100 focus:outline-none ">      
-                    {item}
-                </Link>
-              ))}
-            </div>
-          </div>
-          <div className="">
-            <div>Follow us</div>
-            <div className="flex mt-5 space-x-5 text-gray-400 dark:text-gray-500">
-              <a
-                href="https://twitter.com/web3templates"
-                target="_blank"
-                rel="noopener">
-                <span className="sr-only">Twitter</span>
-                <Twitter />
-              </a>
-              <a
-                href="https://facebook.com/web3templates"
-                target="_blank"
-                rel="noopener">
-                <span className="sr-only">Facebook</span>
-                <Facebook />
-              </a>
-              <a
-                href="https://instagram.com/web3templates"
-                target="_blank"
-                rel="noopener">
-                <span className="sr-only">Instagram</span>
-                <Instagram />
-              </a>
-              <a
-                href="https://linkedin.com/"
-                target="_blank"
-                rel="noopener">
-                <span className="sr-only">Linkedin</span>
-                <Linkedin />
-              </a>
-            </div>
-          </div>
+    
         </div>
 
         <div className="my-10 text-sm text-center text-gray-600 dark:text-gray-800">

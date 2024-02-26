@@ -52,7 +52,7 @@ const Navbar = () => {
                           {item}
                       </Link>
                     ))}
-                    <Link href="/" className="w-full px-6 py-2 mt-3 text-center text-white bg-blue-900 rounded-md lg:ml-5">         
+                    <Link href="https://tally.so/r/nGdBZp" className="w-full px-6 py-2 mt-3 text-center text-white bg-blue-900 rounded-md lg:ml-5">         
                         Prendre un rendez-vous
                     </Link>
                   </>
