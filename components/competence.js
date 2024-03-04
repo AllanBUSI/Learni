@@ -29,7 +29,7 @@ const Competence = () => {
 
     return <div class="flex p-8 flex-wrap justify-center items-center">
         {Tableau.map((v,k) => (
-            <h2 key={k} class="hover:bg-blue-500 m-2 hover:font-bold text-2xl bg-blue-800 shadow-md text-white transition duration-300 ease-in-out h6x-4 py-2 rounded-lg cursor-pointer">
+            <h2 key={k} class="hover:bg-blue-500 p-4 m-2 hover:font-bold text-2xl bg-blue-800 shadow-md text-white transition duration-300 ease-in-out h6x-4 py-2 rounded-lg cursor-pointer">
                 {v}
             </h2>
         ))}
