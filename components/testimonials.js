@@ -13,7 +13,7 @@ const Testimonials  = () => {
         <div className="lg:col-span-2 xl:col-auto">
           <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 ">
             <p className="text-2xl text-gray-900 leading-normal ">
-              Allan nous à permis de monter en compétences sur <Mark> la cybersécurité </Mark>,
+              Allan nous a permis de monter en compétences sur <Mark> la cybersécurité </Mark>,
               nous avons appris a faire des injections SQL avec SQLMap.
             </p>
 

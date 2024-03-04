@@ -11,6 +11,7 @@ import Cta from "../components/cta";
 import Faq from "../components/faq";
 import PopupWidget from "../components/popupWidget";
 import Container from "../components/container";
+import Competence from "../components/competence";
 
 
 const Home = () => {
@@ -34,6 +35,8 @@ const Home = () => {
       <Benefits data={benefitOne} />
       <Benefits imgPos="right" data={benefitTwo} />
 
+      <Competence/>
+
       <Container
       className={`flex w-full flex-col mt-4`}>
         <h2 className="max-w-8xl m-20 text-center text-3xl font-bold leading-snug tracking-tight text-gray-600 lg:leading-tight lg:text-5xl">
@@ -44,7 +47,7 @@ const Home = () => {
       <SectionTitle
         pretitle="Testimonials"
         title="Témoignages d'étudiants">
-        Avec 3000 élèves accompagnez en 2 ans et demi, nous avons créer notre méthodes pédagogiques
+        Avec 3000 élèves accompagnés en 2 ans et demi, nous avons créé notre méthode pédagogique
       </SectionTitle>
       <Testimonials />
       <SectionTitle pretitle="FAQ" title="Frequently Asked Questions">
