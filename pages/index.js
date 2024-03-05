@@ -56,7 +56,6 @@ const Home = () => {
       <Cta />
       <Footer />
       <PopupWidget />
-      <SpeedInsights/>
     </>
   );
 }
