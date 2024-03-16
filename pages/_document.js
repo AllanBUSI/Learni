@@ -14,6 +14,15 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
+          
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y8XSL8GTS8"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments)}
+        gtag('js', new Date());
+
+        gtag('config', 'G-Y8XSL8GTS8');
+      </script>
         </body>
       </Html>
     );
